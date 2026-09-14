@@ -60,8 +60,8 @@ public enum ClientType {
             "15",
             "35",
             "AP3A.241005.015.A2",
-            "132.0.6779.0",
-            "23.47.101",
+            "144.0.7509.3",
+            "25.51.100",
             true,
             true,
             "Android Creator"
