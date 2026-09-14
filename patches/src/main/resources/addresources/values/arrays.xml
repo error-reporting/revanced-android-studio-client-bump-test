@@ -124,12 +124,14 @@
     <app id="youtube">
         <patch id="misc.fix.playback.spoofVideoStreamsPatch">
             <string-array name="revanced_spoof_video_streams_client_type_entries">
+                <item>VisionOS</item>
                 <item>Android Studio</item>
                 <item>Android VR</item>
                 <item>iOS TV</item>
             </string-array>
             <string-array name="revanced_spoof_video_streams_client_type_entry_values">
                 <!-- Extension enum names. -->
+                <item>VISIONOS</item>
                 <item>ANDROID_CREATOR</item>
                 <item>ANDROID_VR_NO_AUTH</item>
                 <item>IOS_UNPLUGGED</item>
