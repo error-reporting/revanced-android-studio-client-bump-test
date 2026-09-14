@@ -114,7 +114,8 @@ public enum ClientType {
             "Android VR Auth"
     ),
     // Internal YT client for an unreleased YT client. May stop working at any time.
-    VISIONOS(101,
+    VISIONOS(
+            101,
             "VISIONOS",
             "Apple",
             "RealityDevice14,1",
