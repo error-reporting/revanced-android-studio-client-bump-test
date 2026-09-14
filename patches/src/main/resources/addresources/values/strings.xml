@@ -1552,7 +1552,7 @@ AVC has a maximum resolution of 1080p, Opus audio codec is not available, and vi
             <string name="revanced_spoof_video_streams_about_ios_tv_summary">"• Movies or paid videos may not play
 • Stable volume is not available
 • Videos end 1 second early"</string>
-            <string name="revanced_spoof_video_streams_about_android_title">Android spoofing side effects</string>
+            <string name="revanced_spoof_video_streams_about_android_title">Android Studio spoofing side effects</string>
             <string name="revanced_spoof_video_streams_about_android_summary">"• Audio track menu is missing
 • Stable volume is not available
 • Force original audio is not available"</string>
