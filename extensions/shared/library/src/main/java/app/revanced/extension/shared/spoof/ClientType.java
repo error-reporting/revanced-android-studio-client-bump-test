@@ -112,8 +112,26 @@ public enum ClientType {
             ANDROID_VR_NO_AUTH.requiresAuth,
             true,
             "Android VR Auth"
+    ),
+    /**
+     * Internal YT client for an unreleased YT client. May stop working at any time.
+     */
+    VISIONOS(
+            101,
+            "VISIONOS",
+            null,
+            "Apple",
+            "RealityDevice14,1",
+            "visionOS",
+            null,
+            null,
+            null,
+            "1.3.21O771",
+            "0.1",
+            false,
+            false,
+            "visionOS"
     );
-
     private static boolean forceAVC() {
         return BaseSettings.SPOOF_VIDEO_STREAMS_IOS_FORCE_AVC.get();
     }
@@ -202,7 +220,7 @@ public enum ClientType {
     @SuppressWarnings("ConstantLocale")
     ClientType(int id,
                String clientName,
-               String packageName,
+               @Nullable String packageName,
                String deviceMake,
                String deviceModel,
                String osName,
@@ -230,7 +248,15 @@ public enum ClientType {
         this.friendlyName = friendlyName;
 
         Locale defaultLocale = Locale.getDefault();
-        if (androidSdkVersion == null) {
+        if (osVersion == visionOS && androidSdkVersion == null) {
+            this.userAgent = String.format("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15)",
+                    packageName,
+                    clientVersion,
+                    deviceModel,
+                    userAgentOsVersion,
+                    defaultLocale
+           );
+        } elif (androidSdkVersion == null) {
             // Convert version from '18.2.22C152' into '18_2_22'
             String userAgentOsVersion = osVersion
                     .replaceAll("(\\d+\\.\\d+\\.\\d+).*", "$1")
