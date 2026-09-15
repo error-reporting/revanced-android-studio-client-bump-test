@@ -253,7 +253,6 @@ public enum ClientType {
                     packageName,
                     clientVersion,
                     deviceModel,
-                    userAgentOsVersion,
                     defaultLocale
            );
         } else if (androidSdkVersion == null) {
