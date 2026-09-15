@@ -256,7 +256,7 @@ public enum ClientType {
                     userAgentOsVersion,
                     defaultLocale
            );
-        } elif (androidSdkVersion == null) {
+        } else if (androidSdkVersion == null) {
             // Convert version from '18.2.22C152' into '18_2_22'
             String userAgentOsVersion = osVersion
                     .replaceAll("(\\d+\\.\\d+\\.\\d+).*", "$1")
