@@ -60,8 +60,8 @@ public enum ClientType {
             "15",
             "35",
             "AP3A.241005.015.A2",
-        "144.0.7509.3",
-        "25.51.100",
+            "144.0.7509.3",
+            "25.51.100",
             true,
             true,
             "Android Creator"
@@ -125,12 +125,12 @@ public enum ClientType {
             "visionOS",
             "26.6.1",
             null,
-            "23O780",
             null,
-            "1.03",
+            null,
+            "1.02",
             false,
             false,
-            "visionOS 1.03"
+            "visionOS 1.02"
     );
     private static boolean forceAVC() {
         return BaseSettings.SPOOF_VIDEO_STREAMS_IOS_FORCE_AVC.get();
