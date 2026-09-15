@@ -235,7 +235,6 @@ public enum ClientType {
         this.id = id;
         this.clientName = clientName;
         this.packageName = packageName;
-        this.userAgent = userAgent;
         this.deviceMake = deviceMake;
         this.deviceModel = deviceModel;
         this.osName = osName;
