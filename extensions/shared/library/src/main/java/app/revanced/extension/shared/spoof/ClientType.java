@@ -127,7 +127,7 @@ public enum ClientType {
             null,
             null,
             null,
-            "1.3",
+            "1.03",
             false,
             false,
             "visionOS"
