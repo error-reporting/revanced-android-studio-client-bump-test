@@ -126,6 +126,7 @@ public enum ClientType {
             "0.1",
             null,
             null,
+            null,
             "1.3.21O771",
             false,
             false,
