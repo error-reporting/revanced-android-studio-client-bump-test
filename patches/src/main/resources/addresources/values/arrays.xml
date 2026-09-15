@@ -125,6 +125,7 @@
         <patch id="misc.fix.playback.spoofVideoStreamsPatch">
             <string-array name="revanced_spoof_video_streams_client_type_entries">
                 <item>Android Studio</item>
+                <item>visionOS</item>
                 <item>Android VR</item>
                 <item>Android TV</item>
                 <item>iOS TV</item>
@@ -132,6 +133,7 @@
             <string-array name="revanced_spoof_video_streams_client_type_entry_values">
                 <!-- Extension enum names. -->
                 <item>ANDROID_CREATOR</item>
+                <item>VISIONOS</item>
                 <item>ANDROID_VR_NO_AUTH</item>
                 <item>ANDROID_UNPLUGGED</item>
                 <item>IOS_UNPLUGGED</item>
