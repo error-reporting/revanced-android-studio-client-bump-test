@@ -117,6 +117,8 @@ public enum ClientType {
     VISIONOS(
             101,
             "VISIONOS",
+            null,
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15",
             "Apple",
             "RealityDevice14,1",
             "visionOS",
@@ -125,7 +127,6 @@ public enum ClientType {
             null,
             null,
             "0.1",
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15",
             false,
             false,
             "visionOS"
