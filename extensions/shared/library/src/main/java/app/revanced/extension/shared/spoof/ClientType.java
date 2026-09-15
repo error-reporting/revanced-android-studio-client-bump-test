@@ -123,11 +123,10 @@ public enum ClientType {
             "Apple",
             "RealityDevice14,1",
             "visionOS",
-            null,
+            "0.1",
             null,
             null,
             "1.3.21O771",
-            "0.1",
             false,
             false,
             "visionOS"
@@ -248,7 +247,7 @@ public enum ClientType {
         this.friendlyName = friendlyName;
 
         Locale defaultLocale = Locale.getDefault();
-        if (osVersion == visionOS && androidSdkVersion == null) {
+        if (osName == visionOS && androidSdkVersion == null) {
             this.userAgent = String.format("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15)",
                     packageName,
                     clientVersion,
