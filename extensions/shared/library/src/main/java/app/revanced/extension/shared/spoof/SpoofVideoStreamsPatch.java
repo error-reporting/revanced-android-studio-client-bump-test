@@ -64,24 +64,6 @@ public class SpoofVideoStreamsPatch {
 
         return playerRequestUri;
     }
-   public static String blockGetAttRequest(String originalUrlString) {
-        if (SPOOF_STREAMING_DATA) {
-            try {
-                var originalUri = Uri.parse(originalUrlString);
-                String path = originalUri.getPath();
-
-                if (path != null && path.contains("att/get")) {
-                    Logger.printDebug(() -> "Blocking 'att/get' by returning internet connection check uri");
-
-                    return INTERNET_CONNECTION_CHECK_URI_STRING;
-                }
-            } catch (Exception ex) {
-                Logger.printException(() -> "blockGetAttRequest failure", ex);
-            }
-        }
-
-        return originalUrlString;
-}
     /**
      * Injection point.
      * <p>
@@ -93,7 +75,7 @@ public class SpoofVideoStreamsPatch {
                 var originalUri = Uri.parse(originalUrlString);
                 String path = originalUri.getPath();
 
-                if (path != null && path.contains("initplayback")) {
+                if (path != null && path.contains("att/get") || path.contains("initplayback")) {
                     Logger.printDebug(() -> "Blocking 'initplayback' by clearing query");
 
                     return INTERNET_CONNECTION_CHECK_URI_STRING;
