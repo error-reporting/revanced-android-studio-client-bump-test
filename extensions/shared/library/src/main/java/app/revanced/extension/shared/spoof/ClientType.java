@@ -24,7 +24,7 @@ public enum ClientType {
             "32",
             "SQ3A.220605.009.A1",
             "132.0.6808.3",
-            "1.73.21",
+            "1.74.19",
             false,
             false,
             "Android VR No auth"
