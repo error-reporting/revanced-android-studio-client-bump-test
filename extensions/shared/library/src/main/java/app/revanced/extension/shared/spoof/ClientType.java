@@ -248,7 +248,7 @@ public enum ClientType {
         this.friendlyName = friendlyName;
 
         Locale defaultLocale = Locale.getDefault();
-        if (osName == visionOS && androidSdkVersion == null) {
+        if (osName == "visionOS" && androidSdkVersion == null) {
             this.userAgent = String.format("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15)",
                     packageName,
                     clientVersion,
