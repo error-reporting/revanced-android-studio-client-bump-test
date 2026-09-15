@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: dev
+          ref: main
           fetch-depth: 0
           clean: true
 
@@ -39,6 +39,6 @@ jobs:
         uses: repo-sync/pull-request@v2
         with:
           source_branch: feat/translations
-          destination_branch: dev
+          destination_branch: main
           pr_title: "chore: Sync translations"
           pr_body: "Sync translations from [crowdin.com/project/revanced](https://crowdin.com/project/revanced)"
