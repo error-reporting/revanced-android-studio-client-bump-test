@@ -117,16 +117,15 @@ public enum ClientType {
     VISIONOS(
             101,
             "VISIONOS",
-            "",
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15",
             "Apple",
             "RealityDevice14,1",
             "visionOS",
             "1.3.21O771",
-            null,
-            null,
-            null,
             "0.1",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15",
+            null,
+            null,
+            null,
             false,
             false,
             "visionOS"
@@ -147,6 +146,7 @@ public enum ClientType {
     /**
      * App package name.
      */
+    @Nullable
     private final String packageName;
 
     /**
