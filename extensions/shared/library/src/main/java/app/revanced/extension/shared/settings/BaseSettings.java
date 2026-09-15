@@ -6,7 +6,7 @@ import static app.revanced.extension.shared.settings.Setting.parent;
 import static app.revanced.extension.shared.spoof.SpoofVideoStreamsPatch.AudioStreamLanguageOverrideAvailability;
 import static app.revanced.extension.shared.spoof.SpoofVideoStreamsPatch.SpoofiOSAvailability;
 
-import app.revanced.extension.shared.spoof.ClientType.*;
+import app.revanced.extension.shared.spoof.ClientType;
 
 /**
  * Settings shared across multiple apps.
