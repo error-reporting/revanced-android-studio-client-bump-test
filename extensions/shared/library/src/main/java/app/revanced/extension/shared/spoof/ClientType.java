@@ -23,7 +23,7 @@ public enum ClientType {
             // Android 12.1
             "32",
             "SQ3A.220605.009.A1",
-            "132.0.6808.3",
+            "144.0.7509.3",
             "1.69.27",
             false,
             false,
