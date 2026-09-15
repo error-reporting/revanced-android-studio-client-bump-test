@@ -127,7 +127,7 @@ public enum ClientType {
             null,
             null,
             null,
-            "1.3.21O771",
+            "1.3",
             false,
             false,
             "visionOS"
@@ -253,7 +253,6 @@ public enum ClientType {
                     packageName,
                     clientVersion,
                     osVersion,
-                    osName,
                     deviceModel,
                     defaultLocale
             );
