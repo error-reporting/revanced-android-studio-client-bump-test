@@ -125,12 +125,12 @@ public enum ClientType {
             "visionOS",
             "26.6.1",
             null,
-            null,
+            "23O780",
             null,
             "1.03",
             false,
             false,
-            "visionOS"
+            "visionOS 1.03"
     );
     private static boolean forceAVC() {
         return BaseSettings.SPOOF_VIDEO_STREAMS_IOS_FORCE_AVC.get();
@@ -253,7 +253,7 @@ public enum ClientType {
              String userAgentOsVersion = osVersion
                     .replaceAll("(\\d+\\.\\d+\\.\\d+).*", "$1")
                     .replace(".", "_");
-            this.userAgent = String.format("%s/%s (%s; U; CPU visionOS %s like Mac OS X; %s) gzip",
+            this.userAgent = String.format("%s/%s (%s; U; CPU visionOS %s like Mac OS X; %s; Build/%s) gzip",
                     packageName,
                     clientVersion,
                     deviceModel,
