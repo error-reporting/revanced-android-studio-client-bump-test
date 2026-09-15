@@ -121,7 +121,7 @@ public enum ClientType {
             "VISIONOS",
             "com.google.visionosyoutube",
             "Apple",
-            "RealityDevice17,1",
+            "RealityDevice14,1",
             "visionOS",
             "26.6.1",
             null,
@@ -132,6 +132,7 @@ public enum ClientType {
             false,
             "visionOS 1.02"
     );
+    
     private static boolean forceAVC() {
         return BaseSettings.SPOOF_VIDEO_STREAMS_IOS_FORCE_AVC.get();
     }
