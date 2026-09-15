@@ -116,14 +116,14 @@ public enum ClientType {
     /**
      * Internal YT client for an unreleased YT client. May stop working at any time.
      */
-    VISIONOS(
+      VISIONOS(
             101,
             "VISIONOS",
-            null,
+            "com.google.visionosyoutube",
             "Apple",
-            "RealityDevice14,1",
+            "RealityDevice17,1",
             "visionOS",
-            "0.1",
+            "26.6.1",
             null,
             null,
             null,
@@ -249,7 +249,7 @@ public enum ClientType {
 
         Locale defaultLocale = Locale.getDefault();
         if (osName == "visionOS" && androidSdkVersion == null) {
-           this.userAgent = String.format("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15; %s; %s; Build/%s)",
+           this.userAgent = String.format("com.google.visionosyoutube/1.03 (RealityDevice17,1; U; CPU visionOS 26_6_1 like Mac OS X; en_US) gzip",
                     packageName,
                     clientVersion,
                     osVersion,
