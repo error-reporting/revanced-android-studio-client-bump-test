@@ -253,7 +253,7 @@ public enum ClientType {
              String userAgentOsVersion = osVersion
                     .replaceAll("(\\d+\\.\\d+\\.\\d+).*", "$1")
                     .replace(".", "_");
-            this.userAgent = String.format("%s/%s (%s; U; CPU visionOS %s like Mac OS X; %s; Build/%s) gzip",
+            this.userAgent = String.format("%s/%s (%s; U; CPU visionOS %s like Mac OS X; %s; Build/23O780) gzip",
                     packageName,
                     clientVersion,
                     deviceModel,
