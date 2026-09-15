@@ -248,12 +248,16 @@ public enum ClientType {
         this.friendlyName = friendlyName;
 
         Locale defaultLocale = Locale.getDefault();
+        
         if (osName == "visionOS" && androidSdkVersion == null) {
-           this.userAgent = String.format("com.google.visionosyoutube/1.03 (RealityDevice17,1; U; CPU visionOS 26_6_1 like Mac OS X; en_US) gzip",
+             String userAgentOsVersion = osVersion
+                    .replaceAll("(\\d+\\.\\d+\\.\\d+).*", "$1")
+                    .replace(".", "_");
+            this.userAgent = String.format("%s/%s (%s; U; CPU visionOS %s like Mac OS X; %s) gzip",
                     packageName,
                     clientVersion,
-                    osVersion,
                     deviceModel,
+                    userAgentOsVersion,
                     defaultLocale
             );
         } else if (androidSdkVersion == null) {
