@@ -124,7 +124,6 @@
     <app id="youtube">
         <patch id="misc.fix.playback.spoofVideoStreamsPatch">
             <string-array name="revanced_spoof_video_streams_client_type_entries">
-                <item>VisionOS</item>
                 <item>Android Studio</item>
                 <item>Android VR</item>
                 <item>iOS TV</item>
