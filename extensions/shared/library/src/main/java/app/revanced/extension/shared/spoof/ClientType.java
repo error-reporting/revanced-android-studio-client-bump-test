@@ -69,7 +69,7 @@ public enum ClientType {
     IOS_UNPLUGGED(
             33,
             "IOS_UNPLUGGED",
-            "com.google.ios.youtube.unplugged",
+            "com.google.ios.youtubeunplugged",
             "Apple",
             forceAVC()
                     // 11 Pro Max (last device with iOS 13)
