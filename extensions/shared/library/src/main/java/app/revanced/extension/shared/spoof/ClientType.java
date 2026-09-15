@@ -120,6 +120,7 @@ public enum ClientType {
             101,
             "VISIONOS",
             null,
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15",
             "Apple",
             "RealityDevice14,1",
             "visionOS",
@@ -221,6 +222,7 @@ public enum ClientType {
     ClientType(int id,
                String clientName,
                @Nullable String packageName,
+               String userAgent,
                String deviceMake,
                String deviceModel,
                String osName,
@@ -235,6 +237,7 @@ public enum ClientType {
         this.id = id;
         this.clientName = clientName;
         this.packageName = packageName;
+        this.userAgent = userAgent;
         this.deviceMake = deviceMake;
         this.deviceModel = deviceModel;
         this.osName = osName;
@@ -249,7 +252,7 @@ public enum ClientType {
 
         Locale defaultLocale = Locale.getDefault();
         if (osName == "visionOS" && androidSdkVersion == null) {
-            this.userAgent = String.format("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15)",
+                    userAgent,
                     packageName,
                     clientVersion,
                     osVersion,
