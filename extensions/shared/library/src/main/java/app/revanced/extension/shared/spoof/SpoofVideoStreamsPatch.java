@@ -24,7 +24,7 @@ public class SpoofVideoStreamsPatch {
     /**
      * Any unreachable ip address.  Used to intentionally fail requests.
      */
-    private static final String UNREACHABLE_HOST_URI_STRING = "https://127.0.0.0";
+    private static final String UNREACHABLE_HOST_URI_STRING = "https://www.google.com/gen_204";
     private static final Uri UNREACHABLE_HOST_URI = Uri.parse(UNREACHABLE_HOST_URI_STRING);
 
     /**
@@ -77,9 +77,9 @@ public class SpoofVideoStreamsPatch {
                 String path = originalUri.getPath();
 
                 if (path != null && path.contains("initplayback")) {
-                    Logger.printDebug(() -> "Blocking 'initplayback' by clearing query");
+                    Logger.printDebug(() -> "Blocking 'initplayback' by returning unreachable uri");
 
-                    return originalUri.buildUpon().clearQuery().build().toString();
+                    return UNREACHABLE_HOST_URI
                 }
             } catch (Exception ex) {
                 Logger.printException(() -> "blockInitPlaybackRequest failure", ex);
@@ -89,6 +89,9 @@ public class SpoofVideoStreamsPatch {
         return originalUrlString;
     }
 
+    public static boolean disableSABR() {
+        return SPOOF_STREAMING_DATA;
+}
     /**
      * Injection point.
      */
