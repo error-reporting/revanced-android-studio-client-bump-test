@@ -24,7 +24,7 @@ public enum ClientType {
             "32",
             "SQ3A.220605.009.A1",
             "132.0.6808.3",
-            "1.64.34",
+            "1.69.27",
             false,
             false,
             "Android VR No auth"
@@ -41,8 +41,8 @@ public enum ClientType {
             "14",
             "34",
             "UTTK.260317.003",
-        "151.0.7922.83",
-        "10.36.0",
+            "151.0.7922.83",
+            "10.34.0",
             true,
             true,
             "Android TV"
