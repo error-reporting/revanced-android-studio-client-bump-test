@@ -112,24 +112,6 @@ public enum ClientType {
             ANDROID_VR_NO_AUTH.requiresAuth,
             true,
             "Android VR Auth"
-    ),
-    // Internal YT client for an unreleased YT client. May stop working at any time.
-        VISIONOS(
-            101,
-            "VISIONOS",
-            null,
-            "Apple",
-            "RealityDevice14,1",
-            "visionOS",
-            "1.3.21O771",
-            "0.1",
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15",
-            null,
-            null,
-            null,
-            false,
-            false,
-            "visionOS"
     );
 
     private static boolean forceAVC() {
