@@ -40,9 +40,9 @@ public enum ClientType {
             "Android",
             "14",
             "34",
-            "UTTK.260317.003",          
-            "151.0.7922.83",
-            "10.36.0",
+            "UTTK.260317.003",
+        "151.0.7922.83",
+        "10.36.0",
             true,
             true,
             "Android TV"
@@ -60,8 +60,8 @@ public enum ClientType {
             "15",
             "35",
             "AP3A.241005.015.A2",
-            "144.0.7509.3",
-            "25.51.100",
+        "144.0.7509.3",
+        "25.51.100",
             true,
             true,
             "Android Creator"
