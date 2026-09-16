@@ -113,7 +113,7 @@ public enum ClientType {
             true,
             "Android VR Auth"
     ),
-/**
+     /**
      * Internal YT client for an unreleased YT client. May stop working at any time.
      */
       VISIONOS(
@@ -250,6 +250,7 @@ public enum ClientType {
         this.friendlyName = friendlyName;
 
         Locale defaultLocale = Locale.getDefault();
+        
         if (osName == "visionOS" && androidSdkVersion == null) {
              String userAgentOsVersion = osVersion
                     .replaceAll("(\\d+\\.\\d+\\.\\d+).*", "$1")
@@ -260,8 +261,8 @@ public enum ClientType {
                     deviceModel,
                     userAgentOsVersion,
                     defaultLocale
-            );
-       else if (androidSdkVersion == null) {
+        );
+        } else if (androidSdkVersion == null) {
             // Convert version from '18.2.22C152' into '18_2_22'
             String userAgentOsVersion = osVersion
                     .replaceAll("(\\d+\\.\\d+\\.\\d+).*", "$1")
@@ -287,5 +288,4 @@ public enum ClientType {
         }
         Logger.printDebug(() -> "userAgent: " + this.userAgent);
     }
-
 }
