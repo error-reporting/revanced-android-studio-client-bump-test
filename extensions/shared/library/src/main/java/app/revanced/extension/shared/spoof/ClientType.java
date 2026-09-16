@@ -24,7 +24,7 @@ public enum ClientType {
             "32",
             "SQ3A.220605.009.A1",
             "132.0.6808.3",
-            "1.61.48",
+            "1.69.27",
             false,
             false,
             "Android VR No auth"
@@ -36,13 +36,13 @@ public enum ClientType {
             "ANDROID_UNPLUGGED",
             "com.google.android.apps.youtube.unplugged",
             "Google",
-            "Google TV Streamer",
+            "Google TV Streamer 4K",
             "Android",
             "14",
             "34",
-            "UTT3.240625.001.K5",
-            "132.0.6808.3",
-            "8.49.0",
+            "UTTK.260317.003",
+            "151.0.7922.83",
+            "10.34.0",
             true,
             true,
             "Android TV"
@@ -60,8 +60,8 @@ public enum ClientType {
             "15",
             "35",
             "AP3A.241005.015.A2",
-            "132.0.6779.0",
-            "23.47.101",
+            "144.0.7509.3",
+            "25.51.100",
             true,
             true,
             "Android Creator"
@@ -112,7 +112,27 @@ public enum ClientType {
             ANDROID_VR_NO_AUTH.requiresAuth,
             true,
             "Android VR Auth"
+    ),
+/**
+     * Internal YT client for an unreleased YT client. May stop working at any time.
+     */
+      VISIONOS(
+            101,
+            "VISIONOS",
+            "com.google.visionosyoutube",
+            "Apple",
+            "RealityDevice14,1",
+            "visionOS",
+            "26.6.1",
+            null,
+            null,
+            null,
+            "1.02",
+            false,
+            false,
+            "visionOS 1.02"
     );
+
 
     private static boolean forceAVC() {
         return BaseSettings.SPOOF_VIDEO_STREAMS_IOS_FORCE_AVC.get();
@@ -129,6 +149,7 @@ public enum ClientType {
     /**
      * App package name.
      */
+    @Nullable
     private final String packageName;
 
     /**
@@ -201,7 +222,7 @@ public enum ClientType {
     @SuppressWarnings("ConstantLocale")
     ClientType(int id,
                String clientName,
-               String packageName,
+               @Nullable String packageName,
                String deviceMake,
                String deviceModel,
                String osName,
@@ -229,7 +250,18 @@ public enum ClientType {
         this.friendlyName = friendlyName;
 
         Locale defaultLocale = Locale.getDefault();
-        if (androidSdkVersion == null) {
+        if (osName == "visionOS" && androidSdkVersion == null) {
+             String userAgentOsVersion = osVersion
+                    .replaceAll("(\\d+\\.\\d+\\.\\d+).*", "$1")
+                    .replace(".", "_");
+            this.userAgent = String.format("%s/%s (%s; U; CPU visionOS %s like Mac OS X; %s; Build/23O780) gzip",
+                    packageName,
+                    clientVersion,
+                    deviceModel,
+                    userAgentOsVersion,
+                    defaultLocale
+            );
+       else if (androidSdkVersion == null) {
             // Convert version from '18.2.22C152' into '18_2_22'
             String userAgentOsVersion = osVersion
                     .replaceAll("(\\d+\\.\\d+\\.\\d+).*", "$1")
