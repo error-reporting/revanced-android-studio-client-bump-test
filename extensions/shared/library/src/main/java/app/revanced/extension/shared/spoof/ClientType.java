@@ -36,7 +36,7 @@ public enum ClientType {
             "ANDROID_UNPLUGGED",
             "com.google.android.apps.youtube.unplugged",
             "Google",
-            "Google TV Streamer 4K",
+            "Google TV Streamer",
             "Android",
             "14",
             "34",
@@ -64,7 +64,7 @@ public enum ClientType {
             "25.51.100",
             true,
             true,
-            "Android Creator"
+            "Android Studio"
     ),
     IOS_UNPLUGGED(
             33,
