@@ -135,7 +135,7 @@
                 <item>ANDROID_CREATOR</item>
                 <item>VISIONOS</item>
                 <item>ANDROID_UNPLUGGED</item>
-                <item>ANDROID_VR_NO_AUTH</item>
+                <item>ANDROID_VR_AUTH</item>
                 <item>IOS_UNPLUGGED</item>
             </string-array>
         </patch>
