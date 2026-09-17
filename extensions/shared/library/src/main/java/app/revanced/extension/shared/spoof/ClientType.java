@@ -104,6 +104,24 @@ public enum ClientType {
             forceAVC()
                     ? "iOS TV Force AVC"
                     : "iOS TV"
+    ),
+     /**
+     * Internal YT client for an unreleased YT client. May stop working at any time.
+     */
+      VISIONOS(
+            101,
+            "VISIONOS",
+            "Apple",
+            "RealityDevice14,1",
+            "visionOS",
+            "26.6.1",
+            "com.google.visionosyoutube/1.02 (RealityDevice14,1; U; CPU visionOS 26_6_1 like Mac OS X) gzip",
+            null,
+            null,
+            "1.02",
+            false,
+            false,
+            "visionOS 1.02"
     );
 
     private static boolean forceAVC() {
