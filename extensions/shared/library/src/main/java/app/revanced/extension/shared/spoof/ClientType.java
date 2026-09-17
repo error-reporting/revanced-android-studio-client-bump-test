@@ -52,7 +52,7 @@ public enum ClientType {
             Build.MODEL,
             "Android",
             "13",
-            "com.google.android.apps.youtube.creator/25.51.100 (Linux; U; Android 13; Cronet/144.0.7509.3; en_US) gzip",
+            "com.google.android.apps.youtube.creator/25.51.100 (Linux; U; Android 13 + Build.ID; Cronet/144.0.7509.3; en_US) gzip",
             "33",
             Build.ID,
             "25.51.100",
