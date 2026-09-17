@@ -184,7 +184,7 @@ public enum ClientType {
                String osVersion,
                String userAgent,
                @Nullable String androidSdkVersion,
-               @Nullable String buildId
+               @Nullable String buildId,
                String clientVersion,
                boolean requiresAuth,
                boolean useAuth,
