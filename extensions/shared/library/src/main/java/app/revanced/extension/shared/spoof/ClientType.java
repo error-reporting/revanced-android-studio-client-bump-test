@@ -19,7 +19,7 @@ public enum ClientType {
             "Quest 3",
             "Android",
             "12",
-            "com.google.android.apps.youtube.vr.oculus/1.69.27 (Linux; U; Android 12; Cronet/144.0.7509.3) gzip",
+            "com.google.android.apps.youtube.vr.oculus/1.69.27 (Linux; U; Android 12; Cronet/144.0.7509.3; en_US) gzip",
             "32", // Android 12.1
             "SQ3A.220605.009.A1",
             "1.69.27",
@@ -36,7 +36,7 @@ public enum ClientType {
             "Google TV Streamer",
             "Android",
             "14",
-            "com.google.android.apps.youtube.unplugged/10.34.0 (Linux; U; Android 14; Cronet/151.0.7922.83) gzip",
+            "com.google.android.apps.youtube.unplugged/10.34.0 (Linux; U; Android 14; Cronet/151.0.7922.83; en_US) gzip",
             "34",
             "UTTK.260317.003",
             "10.34.0",
@@ -52,7 +52,7 @@ public enum ClientType {
             Build.MODEL,
             "Android",
             "13",
-            "com.google.android.apps.youtube.creator/24.45.100 (Linux; U; Android 13; Cronet/144.0.7509.3) gzip",
+            "com.google.android.apps.youtube.creator/25.51.100 (Linux; U; Android 13; Cronet/144.0.7509.3; en_US) gzip",
             "33",
             Build.ID,
             "25.51.100",
@@ -88,8 +88,8 @@ public enum ClientType {
                     ? "13.7.17H35" // Last release of iOS 13.
                     : "18.2.22C152",
             forceAVC()
-                    ? "com.google.ios.youtubeunplugged/6.45 (iPhone12,5; U; CPU iOS 13_7 like Mac OS X)"
-                    : "com.google.ios.youtubeunplugged/8.49 (iPhone16,2; U; CPU iOS 18_2_22 like Mac OS X)",
+                    ? "com.google.ios.youtubeunplugged/6.45 (iPhone12,5; U; CPU iOS 13_7 like Mac OS X; en_US)"
+                    : "com.google.ios.youtubeunplugged/8.49 (iPhone16,2; U; CPU iOS 18_2_22 like Mac OS X; en_US)",
             null,
             null,
             // Version number should be a valid iOS release.
@@ -115,8 +115,8 @@ public enum ClientType {
             "RealityDevice14,1",
             "visionOS",
             "26.6.1",
-            "com.google.visionosyoutube/1.02 (RealityDevice14,1; U; CPU visionOS 26_6_1 like Mac OS X) gzip",
-            null,
+            "com.google.visionosyoutube/1.02 (RealityDevice14,1; U; CPU visionOS 26_6_1 like Mac OS X; en_US) gzip",
+            "23O780",
             null,
             "1.02",
             false,
