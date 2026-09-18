@@ -171,9 +171,9 @@ object YouTubeClient {
     private const val OS_NAME_VISIONOS = "visionOS"
     private const val OS_VERSION_VISIONS = "26.6.1"
     private val USER_AGENT_VISIONOS = if (useVisionOSAV1())
-        "com.google.visionosyoutube/1.03 (RealityDevice17,1; U; CPU visionOS 26_6_1 like Mac OS X; en_US) gzip"
+        "com.google.visionosyoutube/1.03 (RealityDevice17,1; U; CPU visionOS 26_6_1 like Mac OS X ${Locale.getDefault()}) gzip"
     else
-        "com.google.visionosyoutube/1.02 (RealityDevice14,1; U; CPU visionOS 26_6_1 like Mac OS X; en_US) gzip"
+        "com.google.visionosyoutube/1.02 (RealityDevice14,1; U; CPU visionOS 26_6_1 like Mac OS X ${Locale.getDefault()}) gzip"
     // TVHTML5
     /**
      * Video not playable: None.
@@ -267,9 +267,9 @@ object YouTubeClient {
         return BaseSettings.SPOOF_STREAMING_DATA_ANDROID_VR_ENABLE_AV1_CODEC.get()
     }
 
-private fun useVisionOSAV1(): Boolean {
+    private fun useVisionOSAV1(): Boolean {
         return BaseSettings.SPOOF_STREAMING_DATA_VISIONOS_ENABLE_AV1_CODEC.get()
-}
+    }
     
     private fun useJS(): Boolean {
         return supportJ2V8() && BaseSettings.SPOOF_STREAMING_DATA_USE_JS.get()
@@ -470,6 +470,7 @@ private fun useVisionOSAV1(): Boolean {
             userAgent = USER_AGENT_VISIONOS,
             clientVersion = CLIENT_VERSION_VISIONOS,
             clientPlatform = CLIENT_PLATFORM_DESKTOP,
+            supportsMultiAudioTracks = true,
             supportsCookies = false,
             clientName = "VISIONOS",
             friendlyName = if (useVisionOSAV1()) 
