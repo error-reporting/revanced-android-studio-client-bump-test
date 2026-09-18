@@ -136,7 +136,7 @@ object YouTubeClient {
      * 360° VR immersive mode is not available.
      */
     private const val PACKAGE_NAME_ANDROID_CREATOR = "com.google.android.apps.youtube.creator"
-    private const val CLIENT_VERSION_ANDROID_CREATOR = "24.01.000"
+    private const val CLIENT_VERSION_ANDROID_CREATOR = "25.51.100" // Cronet version: 144.0.7509.3
 
     /**
      * The device machine id for the Google Pixel 7a.
@@ -158,13 +158,14 @@ object YouTubeClient {
 
 
     // VISION OS
-    private const val CLIENT_VERSION_VISIONOS = "0.1"
+    private const val PACKAGE_NAME_VISIONOS = "com.google.visionosyoutube"
+    private const val CLIENT_VERSION_VISIONOS = "1.02"
     private const val DEVICE_MAKE_VISIONOS = "Apple"
     private const val DEVICE_MODEL_VISIONOS = "RealityDevice14,1"
     private const val OS_NAME_VISIONOS = "visionOS"
-    private const val OS_VERSION_VISIONS = "1.3.21O771"
+    private const val OS_VERSION_VISIONS = "26.6.1"
     private const val USER_AGENT_VISIONOS =
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15"
+        "com.google.visionosyoutube/1.02 (RealityDevice14,1; U; CPU visionOS 26_6_1 like Mac OS X; en_US) gzip"
 
 
     // TVHTML5
