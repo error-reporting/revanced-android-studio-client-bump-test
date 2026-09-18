@@ -427,7 +427,7 @@ private fun useVisionOSAV1(): Boolean {
             androidSdkVersion = ANDROID_SDK_VERSION_ANDROID_VR,
             clientVersion = CLIENT_VERSION_ANDROID_VR,
             clientName = "ANDROID_VR",
-            friendlyName = if (useAV1())
+            friendlyName = if (useAndroidVRAV1())
                 "Android VR AV1"
             else
                 "Android VR"
@@ -442,7 +442,7 @@ private fun useVisionOSAV1(): Boolean {
             clientVersion = CLIENT_VERSION_ANDROID_VR,
             supportsCookies = false,
             clientName = "ANDROID_VR",
-            friendlyName = if (useAV1())
+            friendlyName = if (useAndroidVRAV1())
                 "Android VR AV1"
             else
                 "Android VR"
@@ -472,7 +472,10 @@ private fun useVisionOSAV1(): Boolean {
             clientPlatform = CLIENT_PLATFORM_DESKTOP,
             supportsCookies = false,
             clientName = "VISIONOS",
-            friendlyName = "visionOS"
+            friendlyName = if (useVisionOSAV1()) 
+                "VisionOS AV1"
+            else
+                "VisionOS"
         ),
         TV(
             id = 7,
