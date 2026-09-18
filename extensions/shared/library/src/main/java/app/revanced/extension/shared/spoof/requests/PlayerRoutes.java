@@ -17,7 +17,7 @@ final class PlayerRoutes {
     static final Route.CompiledRoute GET_STREAMING_DATA = new Route(
             Route.Method.POST,
             "player" +
-                    "?fields=streamingData" +
+                    "?fields=playabilityStatus,streamingData,playerConfig.mediaCommonConfig" +
                     "&alt=proto"
     ).compile();
 
@@ -64,6 +64,7 @@ final class PlayerRoutes {
             innerTubeBody.put("contentCheckOk", true);
             innerTubeBody.put("racyCheckOk", true);
             innerTubeBody.put("videoId", videoId);
+            innerTubeBody.put("disablePlayerResponse", false);
         } catch (JSONException e) {
             Logger.printException(() -> "Failed to create innerTubeBody", e);
         }
