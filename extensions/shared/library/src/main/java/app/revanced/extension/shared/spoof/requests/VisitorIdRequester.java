@@ -20,7 +20,7 @@ import java.time.Instant;
 import java.time.ZoneOffset;
 import java.util.HashMap;
 import java.util.Map;
-
+import java.util.*
 import app.revanced.extension.shared.Logger;
 import app.revanced.extension.shared.Utils;
 import app.revanced.extension.shared.requests.Requester;
@@ -42,7 +42,7 @@ public final class VisitorIdRequester {
         }
     }
 
-    private static final String YT_API_URL_FORMAT = "https://youtubei.googleapis.com/youtubei/v1/%s" +
+    private static final String YT_API_URL_FORMAT = "https://youtubei.googleapis.com/youtubei/v1" +
             "?prettyPrint=false&fields=responseContext.visitorData";
 
 
@@ -147,10 +147,6 @@ public final class VisitorIdRequester {
             JSONObject client = new JSONObject();
             client.put("clientName", clientType.clientName);
             client.put("clientVersion", clientType.clientVersion);
-            String platform = clientType.clientPlatform;
-            if (Utils.isNotEmpty(platform)) {
-                client.put("platform", platform);
-            }
             client.put("hl", "en-GB");
             client.put("gl", "GB");
             client.put("utcOffsetMinutes", 0);
