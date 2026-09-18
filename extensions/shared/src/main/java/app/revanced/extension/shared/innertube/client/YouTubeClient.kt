@@ -90,7 +90,7 @@ object YouTubeClient {
      * [the App Store page of the YouTube app](https://www.meta.com/en-us/experiences/2002317119880945/),
      * in the `Additional details` section.
      */
-    private val CLIENT_VERSION_ANDROID_VR = if (useAV1())
+    private val CLIENT_VERSION_ANDROID_VR = if (useAndroidVRAV1())
         // Lowest version that supports AV1.
         // According to the changelog, only Quest 3 supports the AV1 codec in this version.
         // Cronet version: 122.0.6238.3
