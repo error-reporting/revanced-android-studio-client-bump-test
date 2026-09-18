@@ -171,9 +171,9 @@ object YouTubeClient {
     private const val OS_NAME_VISIONOS = "visionOS"
     private const val OS_VERSION_VISIONS = "26.6.1"
     private val USER_AGENT_VISIONOS = if (useVisionOSAV1())
-        "com.google.visionosyoutube/1.03 (RealityDevice17,1; U; CPU visionOS 26_6_1 like Mac OS X ${Locale.getDefault()}) gzip"
+        "com.google.visionosyoutube/1.03 (RealityDevice17,1; U; CPU visionOS 26_6_1 like Mac OS X; ${Locale.getDefault()}) gzip"
     else
-        "com.google.visionosyoutube/1.02 (RealityDevice14,1; U; CPU visionOS 26_6_1 like Mac OS X ${Locale.getDefault()}) gzip"
+        "com.google.visionosyoutube/1.02 (RealityDevice14,1; U; CPU visionOS 26_6_1 like Mac OS X; ${Locale.getDefault()}) gzip"
     // TVHTML5
     /**
      * Video not playable: None.
