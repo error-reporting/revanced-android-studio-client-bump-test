@@ -19,7 +19,7 @@ final class PlayerRoutes {
     static final Route.CompiledRoute GET_STREAMING_DATA = new Route(
             Route.Method.POST,
             "player" +
-                    "?fields=playabilityStatus,streamingData,playerConfig.mediaCommonConfig" +
+                    "?fields=responseContext.visitorData,playabilityStatus,streamingData,playerConfig.mediaCommonConfig" +
                     "&alt=proto"
     ).compile();
 
