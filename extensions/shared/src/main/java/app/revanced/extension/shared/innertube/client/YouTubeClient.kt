@@ -264,7 +264,7 @@ object YouTubeClient {
         "$packageName/$clientVersion(Linux; U; Android $osVersion; ${Locale.getDefault()}; $deviceModel Build/$buildId) gzip"
 
     private fun useAV1(): Boolean {
-        return BaseSettings.SPOOF_STREAMING_DATA_ANDROID_VR_ENABLE_AV1_CODEC.get() || BaseSettings.SPOOF_STREAMING_DATA_VISIONOS_ENABLE_AV1_CODEC.get()
+        return BaseSettings.SPOOF_STREAMING_DATA_ANDROID_VR_ENABLE_AV1_CODEC.get() || return BaseSettings.SPOOF_STREAMING_DATA_VISIONOS_ENABLE_AV1_CODEC.get()
     }
 
     private fun useJS(): Boolean {
