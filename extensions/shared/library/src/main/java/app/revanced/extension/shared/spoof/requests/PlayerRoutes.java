@@ -33,7 +33,7 @@ final class PlayerRoutes {
     private PlayerRoutes() {
     }
 
-    static String createInnertubeBody(ClientType clientType, String videoId) {
+    static String createInnertubeBody(ClientType clientType, String videoId, String visitorId) {
         JSONObject innerTubeBody = new JSONObject();
 
         try {
@@ -69,7 +69,7 @@ final class PlayerRoutes {
             innerTubeBody.put("contentCheckOk", true);
             innerTubeBody.put("racyCheckOk", true);
             innerTubeBody.put("videoId", videoId);
-            innerTubeBody.put("disablePlayerResponse", false);
+            
         } catch (JSONException e) {
             Logger.printException(() -> "Failed to create innerTubeBody", e);
         }
@@ -78,7 +78,7 @@ final class PlayerRoutes {
     }
 
     @SuppressWarnings("SameParameterValue")
-    static HttpURLConnection getPlayerResponseConnectionFromRoute(Route.CompiledRoute route, ClientType clientType) throws IOException {
+    static HttpULConnection getPlayerResponseConnectionFromRoute(Route.CompiledRoute route, ClientType clientType) throws IOException {
         var connection = Requester.getConnectionFromCompiledRoute(YT_API_URL, route);
 
         connection.setRequestProperty("Content-Type", "application/json");
