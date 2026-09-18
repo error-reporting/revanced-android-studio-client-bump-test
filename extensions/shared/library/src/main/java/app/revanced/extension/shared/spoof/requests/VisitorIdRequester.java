@@ -57,7 +57,7 @@ public final class VisitorIdRequester {
     }
 
     private static void loadVisitorIds() {
-        String clientIds = ClientType.id
+        String clientIds = ClientType.id;
         if (clientIds.isEmpty()) {
             return;
         }
@@ -101,7 +101,6 @@ public final class VisitorIdRequester {
                             .put("fetchedTime", visitor.fetchedTime);
                     json.put(entry.getKey().name(), data);
                 }
-                SharedYouTubeSettings.SPOOF_VIDEO_STREAMS_CLIENT_IDS.save(json.toString());
             } catch (JSONException ex) {
                 Logger.printException(() -> "Failed to update visitor IDs", ex);
             }
