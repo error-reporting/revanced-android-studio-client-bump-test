@@ -159,15 +159,21 @@ object YouTubeClient {
 
     // VISION OS
     private const val PACKAGE_NAME_VISIONOS = "com.google.visionosyoutube"
-    private const val CLIENT_VERSION_VISIONOS = "1.02"
+    private const val CLIENT_VERSION_VISIONOS = if (useAV1())
+        "1.03"
+    else
+        "1.02"
     private const val DEVICE_MAKE_VISIONOS = "Apple"
-    private const val DEVICE_MODEL_VISIONOS = "RealityDevice14,1"
+    private const val DEVICE_MODEL_VISIONOS = if (useAV1())
+        "RealityDevice17,1"
+    else
+        "RealityDevice14,1"
     private const val OS_NAME_VISIONOS = "visionOS"
     private const val OS_VERSION_VISIONS = "26.6.1"
-    private const val USER_AGENT_VISIONOS =
+    private const val USER_AGENT_VISIONOS = if (useAV1())
+        "com.google.visionosyoutube/1.03 (RealityDevice17,1; U; CPU visionOS 26_6_1 like Mac OS X; en_US) gzip"
+    else
         "com.google.visionosyoutube/1.02 (RealityDevice14,1; U; CPU visionOS 26_6_1 like Mac OS X; en_US) gzip"
-
-
     // TVHTML5
     /**
      * Video not playable: None.
