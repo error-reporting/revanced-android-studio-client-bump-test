@@ -7,7 +7,7 @@ import app.revanced.extension.shared.settings.BaseSettings
 import app.revanced.extension.shared.utils.PackageUtils
 import org.apache.commons.lang3.ArrayUtils
 import java.util.Locale
-
+import app.revanced.extension.shared.utils.Logger
 /**
  * Used to fetch streaming data.
  */
@@ -589,4 +589,5 @@ object YouTubeClient {
             )
         }
     }
+Logger.printDebug(() -> "userAgent: " + ClientType.userAgent);
 }
