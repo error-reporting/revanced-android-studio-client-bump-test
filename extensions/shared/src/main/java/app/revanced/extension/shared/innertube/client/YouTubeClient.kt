@@ -7,7 +7,6 @@ import app.revanced.extension.shared.settings.BaseSettings
 import app.revanced.extension.shared.utils.PackageUtils
 import org.apache.commons.lang3.ArrayUtils
 import java.util.Locale
-import app.revanced.extension.shared.utils.Logger
 /**
  * Used to fetch streaming data.
  */
@@ -45,7 +44,7 @@ object YouTubeClient {
      * Video not playable in YouTube Music (No Auth): Paid, Movie, Private, Age-restricted.
      * Uses adaptive bitrate.
      */
-    private const val CLIENT_VERSION_ANDROID_NO_SDK = "20.05.46"
+    private const val CLIENT_VERSION_ANDROID_NO_SDK = "20.14.43"
     private const val DEVICE_MODEL_ANDROID_NO_SDK = ""
     private const val DEVICE_MAKE_ANDROID_NO_SDK = ""
     private val OS_VERSION_ANDROID_NO_SDK = Build.VERSION.RELEASE
@@ -61,7 +60,7 @@ object YouTubeClient {
      * Uses non adaptive bitrate.
      */
     private const val PACKAGE_NAME_ANDROID_MUSIC = "com.google.android.apps.youtube.music"
-    private const val CLIENT_VERSION_ANDROID_MUSIC_NO_SDK = "7.12.52"
+    private const val CLIENT_VERSION_ANDROID_MUSIC_NO_SDK = "7.29.52"
     private const val DEVICE_MODEL_ANDROID_MUSIC_NO_SDK = ""
     private const val DEVICE_MAKE_ANDROID_MUSIC_NO_SDK = ""
     private val OS_VERSION_ANDROID_MUSIC_NO_SDK = Build.VERSION.RELEASE
