@@ -1,5 +1,7 @@
 package app.revanced.extension.shared.spoof.requests;
 
+import android.text.TextUtils;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -51,6 +53,9 @@ final class PlayerRoutes {
             client.put("deviceModel", clientType.deviceModel);
             client.put("clientName", clientType.clientName);
             client.put("clientVersion", clientType.clientVersion);
+            if (!TextUtils.isEmpty(visitorId)) {
+                client.put("visitorData", visitorId);
+            }
             client.put("osName", clientType.osName);
             client.put("osVersion", clientType.osVersion);
             if (clientType.androidSdkVersion != null) {
