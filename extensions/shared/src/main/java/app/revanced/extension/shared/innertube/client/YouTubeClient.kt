@@ -403,6 +403,7 @@ object YouTubeClient {
             androidSdkVersion = ANDROID_SDK_VERSION_ANDROID_NO_SDK,
             clientVersion = CLIENT_VERSION_ANDROID_NO_SDK,
             supportsMultiAudioTracks = true,
+            supportsCookies = false,
             clientName = "ANDROID",
             friendlyName = "Android No SDK"
         ),
