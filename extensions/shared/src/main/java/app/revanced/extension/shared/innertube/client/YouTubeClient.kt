@@ -589,5 +589,4 @@ object YouTubeClient {
             )
         }
     }
-Logger.printDebug(() -> "userAgent: " + ClientType.userAgent)
 }
