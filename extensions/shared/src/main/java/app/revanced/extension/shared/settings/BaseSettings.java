@@ -8,7 +8,7 @@ import static app.revanced.extension.shared.settings.Setting.parent;
 import app.revanced.extension.shared.innertube.client.YouTubeClient.ClientType;
 import app.revanced.extension.shared.patches.ReturnYouTubeUsernamePatch.DisplayFormat;
 import app.revanced.extension.shared.patches.WatchHistoryPatch.WatchHistoryType;
-import app.revanced.extension.shared.patches.spoof.SpoofStreamingDataPatch.ClientvisionOSAvailability;
+import app.revanced.extension.shared.patches.spoof.SpoofStreamingDataPatch.ClientVisionOSAvailability;
 import app.revanced.extension.shared.patches.spoof.SpoofStreamingDataPatch.ClientAndroidVRAvailability;
 import app.revanced.extension.shared.patches.spoof.SpoofStreamingDataPatch.ClientJSAvailability;
 import app.revanced.extension.shared.patches.spoof.SpoofStreamingDataPatch.J2V8Availability;
@@ -39,7 +39,7 @@ public class BaseSettings {
             "revanced_spoof_streaming_data_android_vr_enable_av1_codec_user_dialog_message", new ClientAndroidVRAvailability());
 
     public static final BooleanSetting SPOOF_STREAMING_DATA_VISIONOS_ENABLE_AV1_CODEC = new BooleanSetting("revanced_spoof_streaming_data_visionos_enable_av1_codec", FALSE, true,
-            "revanced_spoof_streaming_data_visionos_enable_av1_codec_user_dialog_message", new ClientvisionOSAvailability());
+            "revanced_spoof_streaming_data_visionos_enable_av1_codec_user_dialog_message", new ClientVisionOSAvailability());
 
     public static final BooleanSetting SPOOF_STREAMING_DATA_USE_JS = new BooleanSetting("revanced_spoof_streaming_data_use_js", !IS_YOUTUBE, true,
             "revanced_spoof_streaming_data_use_js_user_dialog_message", new J2V8Availability());
