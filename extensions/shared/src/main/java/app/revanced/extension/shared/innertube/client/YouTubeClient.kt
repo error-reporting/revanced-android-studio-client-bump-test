@@ -99,22 +99,22 @@ object YouTubeClient {
         // Cronet version: 113.0.5672.24
         "1.47.48"
 
-    private val DEVICE_MODEL_ANDROID_VR = if (useAV1())
+    private val DEVICE_MODEL_ANDROID_VR = if (useAndroidVRAV1())
         // https://dumps.tadiphone.dev/dumps/oculus/eureka
         "Quest 3"
     else
         // https://dumps.tadiphone.dev/dumps/oculus/monterey
         "Quest"
     private const val DEVICE_MAKE_ANDROID_VR = "Oculus"
-    private val OS_VERSION_ANDROID_VR = if (useAV1())
+    private val OS_VERSION_ANDROID_VR = if (useAndroidVRAV1())
         "14"
     else
         "10"
-    private val ANDROID_SDK_VERSION_ANDROID_VR = if (useAV1())
+    private val ANDROID_SDK_VERSION_ANDROID_VR = if (useAndroidVRAV1())
         "34"
     else
         "29"
-    private val BUILD_ID_ANDROID_VR = if (useAV1())
+    private val BUILD_ID_ANDROID_VR = if (useAndroidVRAV1())
         "UP1A.231005.007.A1"
     else
         "QQ3A.200805.001"
@@ -159,18 +159,18 @@ object YouTubeClient {
 
     // VISION OS
     private const val PACKAGE_NAME_VISIONOS = "com.google.visionosyoutube"
-    private val CLIENT_VERSION_VISIONOS = if (useAV1())
+    private val CLIENT_VERSION_VISIONOS = if (useVisionOSAV1())
         "1.03"
     else
         "1.02"
     private const val DEVICE_MAKE_VISIONOS = "Apple"
-    private val DEVICE_MODEL_VISIONOS = if (useAV1())
+    private val DEVICE_MODEL_VISIONOS = if (useVisionOSAV1())
         "RealityDevice17,1"
     else
         "RealityDevice14,1"
     private const val OS_NAME_VISIONOS = "visionOS"
     private const val OS_VERSION_VISIONS = "26.6.1"
-    private val USER_AGENT_VISIONOS = if (useAV1())
+    private val USER_AGENT_VISIONOS = if (useVisionOSAV1())
         "com.google.visionosyoutube/1.03 (RealityDevice17,1; U; CPU visionOS 26_6_1 like Mac OS X; en_US) gzip"
     else
         "com.google.visionosyoutube/1.02 (RealityDevice14,1; U; CPU visionOS 26_6_1 like Mac OS X; en_US) gzip"
@@ -263,10 +263,14 @@ object YouTubeClient {
     ): String =
         "$packageName/$clientVersion(Linux; U; Android $osVersion; ${Locale.getDefault()}; $deviceModel Build/$buildId) gzip"
 
-    private fun useAV1(): Boolean {
-        return BaseSettings.SPOOF_STREAMING_DATA_ANDROID_VR_ENABLE_AV1_CODEC.get() || return BaseSettings.SPOOF_STREAMING_DATA_VISIONOS_ENABLE_AV1_CODEC.get()
+    private fun useAndroidVRAV1(): Boolean {
+        return BaseSettings.SPOOF_STREAMING_DATA_ANDROID_VR_ENABLE_AV1_CODEC.get()
     }
 
+private fun useVisionOSAV1(): Boolean {
+        return BaseSettings.SPOOF_STREAMING_DATA_VISIONOS_ENABLE_AV1_CODEC.get()
+}
+    
     private fun useJS(): Boolean {
         return supportJ2V8() && BaseSettings.SPOOF_STREAMING_DATA_USE_JS.get()
     }
