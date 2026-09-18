@@ -8,6 +8,7 @@ import static app.revanced.extension.shared.settings.Setting.parent;
 import app.revanced.extension.shared.innertube.client.YouTubeClient.ClientType;
 import app.revanced.extension.shared.patches.ReturnYouTubeUsernamePatch.DisplayFormat;
 import app.revanced.extension.shared.patches.WatchHistoryPatch.WatchHistoryType;
+import app.revanced.extension.shared.patches.spoof.SpoofStreamingDataPatch.ClientvisionOSAvailability;
 import app.revanced.extension.shared.patches.spoof.SpoofStreamingDataPatch.ClientAndroidVRAvailability;
 import app.revanced.extension.shared.patches.spoof.SpoofStreamingDataPatch.ClientJSAvailability;
 import app.revanced.extension.shared.patches.spoof.SpoofStreamingDataPatch.J2V8Availability;
@@ -34,9 +35,11 @@ public class BaseSettings {
     public static final BooleanSetting SPOOF_STREAMING_DATA_RELOAD_VIDEO_BUTTON = new BooleanSetting("revanced_spoof_streaming_data_reload_video_button", FALSE, true, parent(SPOOF_STREAMING_DATA));
     public static final BooleanSetting SPOOF_STREAMING_DATA_RELOAD_VIDEO_BUTTON_ALWAYS_SHOW = new BooleanSetting("revanced_spoof_streaming_data_reload_video_button_always_show", TRUE, true, new ShowReloadVideoButtonAvailability());
     public static final BooleanSetting SPOOF_STREAMING_DATA_STATS_FOR_NERDS = new BooleanSetting("revanced_spoof_streaming_data_stats_for_nerds", TRUE, parent(SPOOF_STREAMING_DATA));
-
     public static final BooleanSetting SPOOF_STREAMING_DATA_ANDROID_VR_ENABLE_AV1_CODEC = new BooleanSetting("revanced_spoof_streaming_data_android_vr_enable_av1_codec", FALSE, true,
             "revanced_spoof_streaming_data_android_vr_enable_av1_codec_user_dialog_message", new ClientAndroidVRAvailability());
+
+    public static final BooleanSetting SPOOF_STREAMING_DATA_VISIONOS_ENABLE_AV1_CODEC = new BooleanSetting("revanced_spoof_streaming_data_visionos_enable_av1_codec", FALSE, true,
+            "revanced_spoof_streaming_data_visionos_enable_av1_codec_user_dialog_message", new ClientvisionOSAvailability());
 
     public static final BooleanSetting SPOOF_STREAMING_DATA_USE_JS = new BooleanSetting("revanced_spoof_streaming_data_use_js", !IS_YOUTUBE, true,
             "revanced_spoof_streaming_data_use_js_user_dialog_message", new J2V8Availability());
