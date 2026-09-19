@@ -11,7 +11,7 @@ import app.revanced.patcher.patch.bytecodePatch
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.revanced.patches.all.misc.resources.addResourcesPatch
 import app.revanced.util.findFreeRegister
-import app.revanced.util.fingerprint.legacyFingerprint
+import app.revanced.patcher.util.fingerprint.legacyFingerprint
 import app.revanced.util.findInstructionIndicesReversedOrThrow
 import app.revanced.util.getReference
 import app.revanced.util.indexOfFirstInstructionOrThrow
