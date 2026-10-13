@@ -26,7 +26,7 @@ internal abstract class JsRuntimeChalBaseJCP : JsChallengeProvider() {
     private val jcpGuideUrl = "https://github.com/yt-dlp/yt-dlp/wiki/YouTube-JS-Challenges"
     private val repository = "yt-dlp/ejs"
     override val supportedTypes = listOf(JsChallengeType.N, JsChallengeType.SIG)
-    protected val scriptVersion = "0.0.1"
+    protected val scriptVersion = "0.8.0"
     internal val libPrefix = "nsigsolver/"
 
     private val scriptFilenames = mapOf(
