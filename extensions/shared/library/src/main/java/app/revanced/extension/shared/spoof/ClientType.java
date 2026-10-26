@@ -34,7 +34,7 @@ public enum ClientType {
     ANDROID_UNPLUGGED(
             29,
             "ANDROID_UNPLUGGED",
-            "com.google.android.apps.youtube.unplugged",
+            "com.google.android.youtube.tv",
             "Google",
             "Google TV Streamer 4K",
             "Android",
