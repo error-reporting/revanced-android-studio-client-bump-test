@@ -134,7 +134,7 @@
             <string-array name="revanced_spoof_video_streams_client_type_entry_values">
                 <item>ANDROID_CREATOR</item>
                 <item>VISIONOS</item>
-                <item>ANDROID_UNPLUGGED</item>
+                <item>ANDROID_TV</item>
                 <item>ANDROID_VR_NO_AUTH</item>
                 <item>IOS_UNPLUGGED</item>
             </string-array>
