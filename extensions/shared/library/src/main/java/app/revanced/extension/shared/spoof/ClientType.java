@@ -31,7 +31,7 @@ public enum ClientType {
     ),
     // Chromecast with Google TV 4K.
     // https://dumps.tadiphone.dev/dumps/google/kirkwood
-    ANDROID_UNPLUGGED(
+    ANDROID_TV(
             23,
             "ANDROID_TV",
             "com.google.android.youtube.tv",
