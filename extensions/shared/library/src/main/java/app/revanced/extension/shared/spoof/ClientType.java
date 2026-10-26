@@ -41,7 +41,7 @@ public enum ClientType {
             "14",
             "34",
             "UTTK.260317.003",
-            null,
+            "151.0.7922.83",
             "7.30.301",
             true,
             true,
